@@ -1,0 +1,31 @@
+
+CI & CD
+
+Continous Integration - Code, test, building packages/artifacts
+Continous Deployment - artificats/packaging , deploying code through pipelines
+
+CI through yaml
+
+CODE - TEST - PACKAGE - DEPLOY
+
+steps
+	trigger:
+	 -master
+
+	pool:
+		vmimage: 'windows-x64'
+
+	variables:
+		buildConfiguration: 'Release'
+	
+	-script: dotnet test
+	display name: run unit test cases
+
+	-script: dotnet build --configuration ${buildConfiguration}
+	display Name: building application
+
+	-script: docker build -t my-image:v1.0
+	display Name: Build Image
+
+	-script: docker push my-image:v1.0
+	display Name: Push Image
