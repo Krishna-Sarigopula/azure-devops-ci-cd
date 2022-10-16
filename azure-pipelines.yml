@@ -1,4 +1,4 @@
-name: webapp_ci
+name: webapp_ci&cd
 trigger:
  -main
 pool:
