@@ -3,5 +3,5 @@ trigger:
 - master
 
 steps:
-- script: dotnet build
+- script: dotnet test
   displayName: 'Run a one-line script'
