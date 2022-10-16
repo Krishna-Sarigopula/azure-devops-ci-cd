@@ -1,11 +1,10 @@
-name: webapp_ci&cd
+name: first-ci-cd-pipiline
 trigger:
-    -main
+- master
 
 pool:
- -name: Default
- vmImage: 'windows-latest'
+  vmImage: 'windows-latest'
 
 steps:
- -script: dotnet build
- displayName: 'build'
+- script: dotnet build
+  displayName: 'Run a one-line script'
