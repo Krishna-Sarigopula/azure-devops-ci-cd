@@ -2,9 +2,6 @@ name: first-ci-cd-pipiline
 trigger:
 - master
 
-pool:
-  vmImage: 'windows-latest'
-
 steps:
 - script: dotnet build
   displayName: 'Run a one-line script'
