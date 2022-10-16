@@ -1,10 +1,9 @@
 name: webapp_ci
 trigger:
-	-main
+    -main
 pool:
-	name: Default
-	vmImage: 'windows-latest'
+name: Default
+vmImage: 'windows-latest'
 steps:
-	-script: dotnet build
-	displayName: 'build'
-		
+-script: dotnet build
+displayName: 'build'
